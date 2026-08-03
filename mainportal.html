@@ -15,80 +15,152 @@
 <body>
 
 
-<div class="main-panel">
+<div class="dashboard">
 
 
-<h1>
-WELCOME TO THE DACPC INTERNAL ACCESS PANEL
-</h1>
+    <header class="topbar">
+
+        <h1>
+            DACPC INTERNAL ACCESS PANEL
+        </h1>
+
+        <p>
+            DIMENSIONAL ANOMALY CONTAINMENT AND PARACAUSAL CONTROL
+        </p>
+
+    </header>
 
 
-<div class="status">
 
-<p>
-SECURITY CLEARANCE: STANDARD
-</p>
 
-<p>
-TIME REMAINING UNTIL CLEARANCE EXPIRES: NONE
-</p>
+    <div class="content">
+
+
+
+        <aside class="sidebar">
+
+
+            <h2>
+                DESTINATION
+            </h2>
+
+
+            <button>
+                Sector Function Monitor Systems
+            </button>
+
+
+            <button>
+                Containment Chambers Monitor Systems
+            </button>
+
+
+            <button>
+                Archives
+            </button>
+
+
+            <button onclick="denied()">
+                Admin Command Panel
+            </button>
+
+
+            <button>
+                Inbox
+            </button>
+
+
+            <button>
+                Live Missions Report
+            </button>
+
+
+
+        </aside>
+
+
+
+
+
+        <main class="main-display">
+
+
+            <h2>
+                WELCOME TO THE DACPC INTERNAL ACCESS PANEL
+            </h2>
+
+
+
+            <div class="information">
+
+
+                <p>
+                SECURITY CLEARANCE:
+                <span>
+                STANDARD
+                </span>
+                </p>
+
+
+
+                <p>
+                TIME REMAINING UNTIL CLEARANCE EXPIRES:
+                <span>
+                NONE
+                </span>
+                </p>
+
+
+
+                <p>
+                USER STATUS:
+                VERIFIED PERSONNEL
+                </p>
+
+
+                <p>
+                CONNECTION:
+                SECURE DACPC NETWORK
+                </p>
+
+
+            </div>
+
+
+
+
+
+            <div id="message">
+
+            </div>
+
+
+
+        </main>
+
+
+    </div>
+
+
+
+
+
+    <footer>
+
+        DACPC SERVER STATUS:
+        ONLINE
+
+        |
+        
+        SESSION:
+        ACTIVE
+
+    </footer>
+
+
 
 </div>
 
-
-
-<h2>
-PLEASE SELECT YOUR DESTINATION
-</h2>
-
-
-
-<div class="menu">
-
-
-<button>
-SECTOR FUNCTION MONITOR SYSTEMS
-</button>
-
-
-<button>
-CONTAINMENT CHAMBERS MONITOR SYSTEMS
-</button>
-
-
-<button>
-ARCHIVES
-</button>
-
-
-<button onclick="denied()">
-ADMIN COMMAND PANEL
-<br>
-<span>
-(ACCESS DENIED: SECURITY CLEARANCE LEVEL NOT MET)
-</span>
-</button>
-
-
-<button>
-INBOX
-</button>
-
-
-<button>
-LIVE MISSIONS REPORT
-</button>
-
-
-
-</div>
-
-
-
-<p id="message"></p>
-
-
-</div>
 
 
 
@@ -98,34 +170,41 @@ LIVE MISSIONS REPORT
 
 function denied(){
 
+
 document.getElementById("message").innerHTML =
 
 `
-<br>
 
-<span style="color:red">
+<div class="warning">
 
+<h2>
 ACCESS DENIED
+</h2>
 
-</span>
 
-<br><br>
-
+<p>
 Required Clearance:
-LEVEL 5 OR ABOVE
+LEVEL 5+
+</p>
 
-<br>
 
+<p>
 Current Clearance:
 STANDARD
+</p>
 
-<br><br>
 
-Request logged.
+<p>
+Request has been logged.
+</p>
+
+
+</div>
 
 `;
 
 }
+
 
 
 </script>
