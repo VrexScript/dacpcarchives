@@ -128,6 +128,117 @@ button:hover {
     background:#050505;
 
 }
+/* ============================= */
+/* DACPC PORTAL SYSTEM INTERFACE */
+/* ============================= */
+
+
+.loading-screen {
+
+    position: fixed;
+
+    width:100%;
+    height:100%;
+
+    background:#050505;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#e0e0e0;
+
+    font-family:Consolas, monospace;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.security-popup {
+
+    position:fixed;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.95);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.popup-box {
+
+
+    width:450px;
+
+    padding:40px;
+
+
+    background:#080808;
+
+
+    border:1px solid #8b0000;
+
+
+    text-align:center;
+
+
+    box-shadow:
+    0 0 20px #8b0000;
+
+
+}
+
+
+
+.popup-box h2 {
+
+    color:#ff3333;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.popup-box input {
+
+
+    background:black;
+
+    color:white;
+
+
+    border:1px solid #777;
+
+
+    padding:12px;
+
+
+    margin:20px;
+
+
+}
+
+
+
+.portal {
+
+
+    text-align:center;
+
+}
 
 
 .hidden {
