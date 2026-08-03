@@ -144,16 +144,91 @@ function verifyToken(){
     }
 
 
-    else{
+  else{
 
 
-        document.getElementById("tokenResult")
-        .innerHTML =
-        "TOKEN INVALID. ACCESS DENIED.";
+let attempts = localStorage.getItem("attempts");
 
 
-    }
+if(attempts === null){
 
+    attempts = 3;
+
+}
+
+
+attempts--;
+
+
+localStorage.setItem("attempts", attempts);
+
+
+
+if(attempts > 0){
+
+
+document.getElementById("tokenResult")
+.innerHTML = `
+
+<p style="color:red">
+
+WARNING:
+WRONG IN PERSONNEL TOKEN
+
+</p>
+
+
+<p>
+
+You have ${attempts} more tries left before
+the control panel locks access to your system.
+
+</p>
+
+
+<p>
+
+Note:
+If you believe this is a glitch,
+please contact the authorities manually.
+
+</p>
+
+`;
+
+
+
+}
+
+else{
+
+
+document.getElementById("tokenResult")
+.innerHTML = `
+
+
+<p style="color:red">
+
+ACCESS LOCKED
+
+</p>
+
+
+<p>
+
+Maximum authentication attempts exceeded.
+
+DACPC Servers have locked your access to the terminal. Please contact authorities if the problem persists. 
+
+</p>
+
+
+`;
+
+
+}
+
+}
 
 }
 
