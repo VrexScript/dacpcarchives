@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<title>DACPC Internal Access Panel</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="main-panel">
+
+
+<h1>
+WELCOME TO THE DACPC INTERNAL ACCESS PANEL
+</h1>
+
+
+<div class="status">
+
+<p>
+SECURITY CLEARANCE: STANDARD
+</p>
+
+<p>
+TIME REMAINING UNTIL CLEARANCE EXPIRES: NONE
+</p>
+
+</div>
+
+
+
+<h2>
+PLEASE SELECT YOUR DESTINATION
+</h2>
+
+
+
+<div class="menu">
+
+
+<button>
+SECTOR FUNCTION MONITOR SYSTEMS
+</button>
+
+
+<button>
+CONTAINMENT CHAMBERS MONITOR SYSTEMS
+</button>
+
+
+<button>
+ARCHIVES
+</button>
+
+
+<button onclick="denied()">
+ADMIN COMMAND PANEL
+<br>
+<span>
+(ACCESS DENIED: SECURITY CLEARANCE LEVEL NOT MET)
+</span>
+</button>
+
+
+<button>
+INBOX
+</button>
+
+
+<button>
+LIVE MISSIONS REPORT
+</button>
+
+
+
+</div>
+
+
+
+<p id="message"></p>
+
+
+</div>
+
+
+
+
+<script>
+
+
+function denied(){
+
+document.getElementById("message").innerHTML =
+
+`
+<br>
+
+<span style="color:red">
+
+ACCESS DENIED
+
+</span>
+
+<br><br>
+
+Required Clearance:
+LEVEL 5 OR ABOVE
+
+<br>
+
+Current Clearance:
+STANDARD
+
+<br><br>
+
+Request logged.
+
+`;
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
