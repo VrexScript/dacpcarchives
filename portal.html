@@ -130,18 +130,53 @@ function verifyToken(){
     document.getElementById("tokenInput").value;
 
 
-    if(token === "112010"){
+   if(token === "112010"){
 
 
-        document.getElementById("securityPopup")
-        .style.display="none";
+    document.getElementById("securityPopup").style.display="none";
 
 
-        document.getElementById("portal")
-        .classList.remove("hidden");
+    document.getElementById("loading").style.display="flex";
 
 
-    }
+    let loadingText = document.getElementById("loadingText");
+
+
+    loadingText.innerHTML =
+    "REVERIFYING CREDENTIALS...";
+
+
+    setTimeout(()=>{
+
+        loadingText.innerHTML =
+        "CONTACTING DACPC SERVERS...";
+
+    },2000);
+
+
+
+    setTimeout(()=>{
+
+
+        loadingText.innerHTML =
+        "CREDENTIALS VERIFIED";
+
+
+    },4000);
+
+
+
+    setTimeout(()=>{
+
+
+        window.location.href="mainportal.html";
+
+
+    },6000);
+
+
+
+}
 
 
   else{
