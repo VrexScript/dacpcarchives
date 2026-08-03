@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DACPC Secure Authentication</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="login-container">
+
+
+    <h1>
+        DIMENSIONAL ANOMALY CONTAINMENT<br>
+        AND<br>
+        PARACAUSAL CONTROL
+    </h1>
+
+
+    <h2>
+        SECURE AUTHENTICATION TERMINAL
+    </h2>
+
+
+
+    <div class="login-box">
+
+
+        <input
+        type="text"
+        id="username"
+        placeholder="Username"
+        autocomplete="off">
+
+
+
+        <input
+        type="password"
+        id="password"
+        placeholder="Password">
+
+
+
+        <button id="loginButton">
+            LOGIN
+        </button>
+
+
+        <p id="errorMessage"></p>
+
+
+    </div>
+
+
+
+
+    <div class="options">
+
+
+        <button id="adminButton">
+            Administration Login
+        </button>
+
+
+
+        <button id="bioButton">
+            Bypass Login (Biometric Data)
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- Administration Access Window -->
+
+<div id="adminModal" class="modal hidden">
+
+
+    <div class="modal-content">
+
+
+        <h2>
+            ADMINISTRATIVE ACCESS
+        </h2>
+
+
+        <p>
+            The Webportal Request has been blocked.
+        </p>
+
+
+        <p>
+            No Further Actions.
+        </p>
+
+
+        <button class="closeButton">
+            Return
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- Biometric Access Window -->
+
+
+<div id="bioModal" class="modal hidden">
+
+
+    <div class="modal-content">
+
+
+        <h2>
+            BIOMETRIC AUTHENTICATION
+        </h2>
+
+
+
+        <p>
+            Submit required biometric data.
+        </p>
+
+
+
+        <label>
+            Fingerprint Data
+        </label>
+
+
+        <br>
+
+
+        <input
+        type="text"
+        placeholder="Awaiting fingerprint scanner..."
+        disabled>
+
+
+        <br><br>
+
+
+
+        <label>
+            Corneal Data
+        </label>
+
+
+        <br>
+
+
+        <input
+        type="text"
+        placeholder="Awaiting corneal scanner..."
+        disabled>
+
+
+        <br><br>
+
+
+
+        <button id="verifyBio">
+            Verify
+        </button>
+
+
+
+        <div id="bioResult"></div>
+
+
+
+        <button class="closeButton">
+            Return
+        </button>
+
+
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<script src="js/login.js"></script>
+
+
+</body>
+
+</html>
