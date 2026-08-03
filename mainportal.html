@@ -4,7 +4,6 @@
 <head>
 
 <meta charset="UTF-8">
-
 <title>DACPC Internal Access Panel</title>
 
 <link rel="stylesheet" href="css/style.css">
@@ -15,197 +14,196 @@
 <body>
 
 
-<div class="dashboard">
+<div class="terminal">
 
 
-    <header class="topbar">
+<header>
 
-        <h1>
-            DACPC INTERNAL ACCESS PANEL
-        </h1>
+<div>
+DACPC // INTERNAL ACCESS TERMINAL
+</div>
 
-        <p>
-            DIMENSIONAL ANOMALY CONTAINMENT AND PARACAUSAL CONTROL
-        </p>
+<div class="header-right">
 
-    </header>
+SESSION: ACTIVE<br>
+CLEARANCE: STANDARD
 
+</div>
 
+</header>
 
 
-    <div class="content">
 
 
+<div class="body">
 
-        <aside class="sidebar">
 
+<nav>
 
-            <h2>
-                DESTINATION
-            </h2>
 
+<h3>
+NAVIGATION
+</h3>
 
-            <button>
-                Sector Function Monitor Systems
-            </button>
 
+<div class="nav-item">
+> SECTOR FUNCTION MONITOR SYSTEMS
+</div>
 
-            <button>
-                Containment Chambers Monitor Systems
-            </button>
 
+<div class="nav-item">
+> CONTAINMENT CHAMBER SYSTEMS
+</div>
 
-            <button>
-                Archives
-            </button>
 
+<div class="nav-item">
+> ARCHIVES
+</div>
 
-            <button onclick="denied()">
-                Admin Command Panel
-            </button>
 
+<div class="nav-item denied" onclick="denied()">
 
-            <button>
-                Inbox
-            </button>
+> ADMIN COMMAND PANEL
 
+</div>
 
-            <button>
-                Live Missions Report
-            </button>
 
+<div class="nav-item">
+> INBOX
+</div>
 
 
-        </aside>
+<div class="nav-item">
+> LIVE MISSIONS REPORT
+</div>
 
 
+</nav>
 
 
 
-        <main class="main-display">
 
 
-            <h2>
-                WELCOME TO THE DACPC INTERNAL ACCESS PANEL
-            </h2>
+<section class="screen">
 
 
+<h1>
+WELCOME TO THE DACPC INTERNAL ACCESS PANEL
+</h1>
 
-            <div class="information">
 
+<hr>
 
-                <p>
-                SECURITY CLEARANCE:
-                <span>
-                STANDARD
-                </span>
-                </p>
 
+<p>
+SECURITY CLEARANCE:
+<span>
+STANDARD
+</span>
+</p>
 
 
-                <p>
-                TIME REMAINING UNTIL CLEARANCE EXPIRES:
-                <span>
-                NONE
-                </span>
-                </p>
+<p>
+TIME REMAINING UNTIL CLEARANCE EXPIRES:
+<span>
+NONE
+</span>
+</p>
 
 
+<br>
 
-                <p>
-                USER STATUS:
-                VERIFIED PERSONNEL
-                </p>
 
+<h2>
+PLEASE SELECT YOUR DESTINATION
+</h2>
 
-                <p>
-                CONNECTION:
-                SECURE DACPC NETWORK
-                </p>
 
+<div class="system-box">
 
-            </div>
 
+SYSTEM STATUS
 
+<br><br>
 
+SERVER:
+<span>ONLINE</span>
 
+<br>
 
-            <div id="message">
+NETWORK:
+<span>SECURE</span>
 
-            </div>
+<br>
 
+AUTHENTICATION:
+<span>VERIFIED</span>
 
 
-        </main>
+</div>
 
 
-    </div>
 
+<div id="message"></div>
 
 
-
-
-    <footer>
-
-        DACPC SERVER STATUS:
-        ONLINE
-
-        |
-        
-        SESSION:
-        ACTIVE
-
-    </footer>
+</section>
 
 
 
 </div>
 
+
+
+
+<footer>
+
+DACPC CENTRAL NETWORK
+//
+ALL ACTIONS ARE LOGGED
+
+</footer>
+
+
+
+</div>
 
 
 
 
 <script>
 
-
 function denied(){
 
-
-document.getElementById("message").innerHTML =
+document.getElementById("message").innerHTML=
 
 `
 
-<div class="warning">
+<div class="alert">
 
-<h2>
+WARNING
+
+<br><br>
+
 ACCESS DENIED
-</h2>
 
+<br>
 
-<p>
-Required Clearance:
-LEVEL 5+
-</p>
+CLEARANCE LEVEL REQUIRED: 5
 
+<br>
 
-<p>
-Current Clearance:
-STANDARD
-</p>
+CURRENT LEVEL: STANDARD
 
+<br><br>
 
-<p>
-Request has been logged.
-</p>
-
+INCIDENT HAS BEEN LOGGED
 
 </div>
 
 `;
 
 }
-
-
 
 </script>
 
