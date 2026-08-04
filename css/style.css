@@ -115,7 +115,11 @@ button:hover {
     align-items:center;
 
 }
+.modal.hidden{
 
+    display:none;
+
+}
 
 .modal-content {
 
